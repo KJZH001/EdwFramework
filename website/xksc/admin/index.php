@@ -1,0 +1,35 @@
+<?php
+$fourthId=cut_str($path_info,"_",3);
+$class=$fourthId;
+//主页
+//index
+if($class=="index")
+{
+    require("./website/".$tid."/admin/mian_zhu.php");
+}
+//无赋值
+elseif($class=="error")
+{
+    require("./website/".$tid."/admin/mian_zhu.php");
+}
+//刷新数据_网页全部
+elseif($class=="refreshAll")
+{
+    require("./website/".$tid."/admin/plugin/refresh/all_html.php");
+}
+//刷新数据_安卓全部
+elseif($class=="refreshAndroid")
+{
+    require("./website/".$tid."/admin/plugin/refresh/all_Android.php");
+}
+//刷新数据_基础
+elseif($class=="refreshBasic")
+{
+    require("./website/".$tid."/admin/plugin/refresh/basic.php");
+}
+//刷新数据_教程
+elseif($class=="refreshCourse")
+{
+    require("./website/".$tid."/admin/plugin/refresh/course.php");
+}
+?>
