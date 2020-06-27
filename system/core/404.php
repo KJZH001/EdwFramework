@@ -84,7 +84,15 @@
 		   
 		</div>
 	   <!-- 主界面内容基础网格结束 -->
-	<div class="footer">
+	<div class="footer" style="
+		position: fixed;
+		  left: 0;
+		  right: 0;
+		  will-change: left, right;
+		  transition-property: left, right;
+		  transition-timing-function: @animation-curve-linear-out-slow-in;
+		  transition-duration: 0.3s;
+	     ">
 					<div class="mdui-color-theme-accent mdui-container-fluid" style="width:100vw;">
 						<div class="mdui-typo" style=padding:16px;">
 						By 晓空· Rcraft Inc,.
