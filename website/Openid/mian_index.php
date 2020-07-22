@@ -35,12 +35,22 @@
 			  <label class="mdui-textfield-label mdui-text-color-white-secondary">密码</label>
 			  <input class="mdui-textfield-input" type="text"  name="edw_pwd">
 			</div>
-			<button id="next" class="mdui-btn mdui-ripple mdui-text-color-white-secondary" type="button">注册</button>
-			<button class="mdui-btn mdui-ripple mdui-float-right mdui-text-color-white-secondary" type="button">忘记密码？</button>
+			<?php
+			if($_REQUEST["url"] != null)
+			{
+				echo "<input class=\"mdui-textfield-input\" type=\"hidden\" name=\"url\" value=\"".
+				$_REQUEST["url"]."\">";
+			}
+			?>
+			<button id="next" class="mdui-btn mdui-ripple mdui-text-color-white-secondary" 
+			type="button">注册</button>
+			<button class="mdui-btn mdui-ripple mdui-float-right mdui-text-color-white-secondary" 
+			type="button">忘记密码？</button>
 
 			<br>
 			<br>
-			<button class="mdui-btn mdui-ripple mdui-color-theme-accent mdui-center mdui-text-color-white-secondary mdui-shadow-0 
+			<button class="mdui-btn mdui-ripple mdui-color-theme-accent 
+			mdui-center mdui-text-color-white-secondary mdui-shadow-0 
 			mdui-color-grey-700" style="width:264px;" type="submit">登录</button>
 		</form>
 		
@@ -66,11 +76,21 @@
 		  <label class="mdui-textfield-label mdui-text-color-white-secondary">Password</label>
 		  <input class="mdui-textfield-input" type="text" name="edw_pwd" 
 		  pattern="^.*(?=.{6,})(?=.*[a-z])(?=.*[A-Z]).*$" required/>
-		  <div class="mdui-textfield-error mdui-text-color-white-secondary">密码至少 6 位，且包含大小写字母</div>
-		  <div class="mdui-textfield-helper mdui-text-color-white-secondary">请输入至少 6 位，且包含大小写字母的密码</div>
+		  <div class="mdui-textfield-error mdui-text-color-white-secondary">
+		  密码至少 6 位，且包含大小写字母</div>
+		  <div class="mdui-textfield-helper mdui-text-color-white-secondary">
+		  请输入至少 6 位，且包含大小写字母的密码</div>
 		</div>
+		<?php
+		if($_REQUEST["url"] != null)
+		{
+			echo "<input class=\"mdui-textfield-input\" type=\"hidden\" name=\"url\" value=\"".
+			$_REQUEST["url"]."\">";
+		}
+		?>
 		<br>
-		<button class="mdui-btn mdui-ripple mdui-color-theme-accent mdui-center mdui-text-color-white-secondary 
+		<button class="mdui-btn mdui-ripple mdui-color-theme-accent mdui-center 
+		mdui-text-color-white-secondary 
 		mdui-shadow-0 mdui-color-grey-700" style="width:264px;" type="submit">注册</button>
 		</form>
 		<br>
@@ -119,12 +139,24 @@
 		<label class="mdui-textfield-label mdui-text-color-white-secondary">密码</label>
 		<input class="mdui-textfield-input" type="text" name="edw_pwd">
 		</div>
-		<button id="next_moblie" class="mdui-btn mdui-ripple mdui-text-color-white-secondary" type="button">注册</button>
-		<button class="mdui-btn mdui-ripple mdui-float-right mdui-text-color-white-secondary" type="button">忘记密码？</button>
+		
+		<?php
+		if($_REQUEST["url"] != null)
+		{
+			echo "<input class=\"mdui-textfield-input\" type=\"hidden\" name=\"url\" value=\"".
+			$_REQUEST["url"]."\">";
+		}
+		?>
+		
+		<button id="next_moblie" class="mdui-btn mdui-ripple mdui-text-color-white-secondary" 
+		type="button">注册</button>
+		<button class="mdui-btn mdui-ripple mdui-float-right mdui-text-color-white-secondary" 
+		type="button">忘记密码？</button>
 
 		<br>
 		<br>
-		<button class="mdui-btn mdui-ripple mdui-color-theme-accent mdui-center mdui-text-color-white-secondary 
+		<button class="mdui-btn mdui-ripple mdui-color-theme-accent mdui-center 
+		mdui-text-color-white-secondary 
 		mdui-shadow-0 mdui-color-grey-700"style="width:264px;">登录</button>
 		</form>
 
@@ -149,11 +181,21 @@
 		<label class="mdui-textfield-label mdui-text-color-white-secondary">Password</label>
 		<input class="mdui-textfield-input" type="text" name="edw_pwd" 
 		pattern="^.*(?=.{6,})(?=.*[a-z])(?=.*[A-Z]).*$" required/>
-		<div class="mdui-textfield-error mdui-text-color-white-secondary">密码至少 6 位，且包含大小写字母</div>
-		<div class="mdui-textfield-helper mdui-text-color-white-secondary">请输入至少 6 位，且包含大小写字母的密码</div>
+		<div class="mdui-textfield-error mdui-text-color-white-secondary">
+		密码至少 6 位，且包含大小写字母</div>
+		<div class="mdui-textfield-helper mdui-text-color-white-secondary">
+		请输入至少 6 位，且包含大小写字母的密码</div>
 		</div>
+		<?php
+		if($_REQUEST["url"] != null)
+		{
+			echo "<input class=\"mdui-textfield-input\" type=\"hidden\" name=\"url\" value=\"".
+			$_REQUEST["url"]."\">";
+		}
+		?>
 		<br>
-		<button class="mdui-btn mdui-ripple mdui-color-theme-accent mdui-center mdui-text-color-white-secondary mdui-shadow-0 
+		<button class="mdui-btn mdui-ripple mdui-color-theme-accent mdui-center 
+		mdui-text-color-white-secondary mdui-shadow-0 
 		mdui-color-grey-700" style="width:264px;" type="submit">注册</button>
 	</form>
 	<br>
