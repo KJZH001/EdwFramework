@@ -15,7 +15,7 @@ if ($gb_sqlonly=="false")
 //引入数据库
 require("./system/core/conn.php");
 //查询数据库
-$sql="SELECT id,user,pwd,permission,email,register_time FROM openid_center WHERE user = '$user' AND 
+$sql="SELECT id,user,pwd,permission,email,register_time,uuid FROM openid_center WHERE user = '$user' AND 
 pwd = '$pwd'";
 $result=mysqli_query($gb_conn,$sql);
 $row=mysqli_fetch_assoc($result);
@@ -28,7 +28,7 @@ if($gb_debug=="true")
 	
 }
 //登录判定
-if ($user == $row['user'] && $pwd == $row['pwd'] && $user != null) 
+if ($user == $row['user'] && $pwd == $row['pwd'] && $user != null && $pwd != null) 
 {
 	//开启session
 	session_start(); 
@@ -43,6 +43,8 @@ if ($user == $row['user'] && $pwd == $row['pwd'] && $user != null)
 	$_SESSION['id'] = $row['id'];
 	//写入邮箱
 	$_SESSION['email'] = $row['email'];
+	//写入UUID
+	$_SESSION['uuid'] = $row['uuid'];
 	//返回提示
 	echo "登录成功";
     //结束页面转跳

@@ -47,6 +47,7 @@
 						echo "<p>权限：".$_SESSION['permission']."</p>";
 						echo "<p>Email：".$_SESSION['email']."</p>";
 						echo "<p>注册时间：".$_SESSION['register_time']."</p>";
+						echo "<p>UUID：".$_SESSION['uuid']."</p>";
 						echo "<button class=\"mdui-btn mdui-ripple mdui-btn-raised mdui-color-white\"
 						onclick=\"window.location.href='../api.php?type=get&server=loginout'\">退出登录
 						</button>";

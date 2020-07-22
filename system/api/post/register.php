@@ -54,9 +54,17 @@ else
     {
         echo "注册时间：".$register_time."<br>";
     }
+    //UUID生成
+    //来自 https://www.cnblogs.com/tine/p/9316509.html
+    $chars = md5(uniqid(mt_rand(), true));  
+    $uuid = substr ( $chars, 0, 8 ) . '-'
+            . substr ( $chars, 8, 4 ) . '-' 
+            . substr ( $chars, 12, 4 ) . '-'
+            . substr ( $chars, 16, 4 ) . '-'
+            . substr ( $chars, 20, 12 );  
     //插入数据
-    $sql="INSERT INTO openid_center(user,pwd,permission,email,register_time) 
-          VALUES('$user','$pwd','$permission','$email','$register_time')";
+    $sql="INSERT INTO openid_center(user,pwd,permission,email,register_time,uuid) 
+          VALUES('$user','$pwd','$permission','$email','$register_time','$uuid')";
     $result=mysqli_query($gb_conn,$sql);
 
     echo "注册成功";
