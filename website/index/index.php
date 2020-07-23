@@ -11,7 +11,6 @@ require("./website/".$fid."/global.php");
 require("./website/".$fid."/header.php");
 ?>
 </head>
-<body>
 <?php
 //引入mian
 require("./website/".$fid."/mian.php");

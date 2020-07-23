@@ -9,14 +9,7 @@
 	}
 	else
 	{
-		if($gb_jsdelivr=="true")
-		{
-			echo "https://cdn.jsdelivr.net/gh/kjzh001/EmptyDreamWorld_PHP_Development-framework/website/Openid/res/background.png";
-		}
-		else
-		{
-			echo "https://s2.ax1x.com/2020/03/11/8Au38S.jpg";
-		}
+		echo "https://s2.ax1x.com/2020/03/11/8Au38S.jpg";
 	}
 	?>
 	);
