@@ -41,7 +41,7 @@ if ($user == $row['user'] && $pwd == $row['pwd'] && $user != null && $pwd != nul
 	$_SESSION['register_time'] = $row['register_time'];
 	//写入id
 	$_SESSION['id'] = $row['id'];
-        //写入邮箱
+    //写入邮箱
 	$_SESSION['email'] = $row['email'];
 	//写入UUID
 	$_SESSION['uuid'] = $row['uuid'];
