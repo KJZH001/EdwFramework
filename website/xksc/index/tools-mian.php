@@ -26,11 +26,17 @@
 			
 			<li class="mdui-subheader">支持与帮助</li>
 			<li class="mdui-list-item mdui-ripple">
-    	       <div class="mdui-list-item-content" onclick="window.open('http://blog.rcraft.ml/');">访问 晓空blog</div>
+    	       <div class="mdui-list-item-content" onclick="window.open('http://blog.moeworld.tech/');">访问 晓空blog</div>
 			   <i class="mdui-list-item-icon mdui-icon material-icons">open_in_new</i>
   	        </li>
 		    <li class="mdui-list-item mdui-ripple">
     	       <div class="mdui-list-item-content" onclick="window.open('http://bbs.rcraft.ml/');">访问 Rcraft官方站</div>
+			   <i class="mdui-list-item-icon mdui-icon material-icons">open_in_new</i>
+  	        </li>
+			<li class="mdui-list-item mdui-ripple">
+    	       <div class="mdui-list-item-content" onclick="window.open('https://gitee.com/rcraft/EmptyDreamWorld_PHP_Development-framework');">
+			   访问 Gitee 克隆本站源码
+			   </div>
 			   <i class="mdui-list-item-icon mdui-icon material-icons">open_in_new</i>
   	        </li>
 			<li class="mdui-list-item mdui-ripple">
@@ -40,7 +46,7 @@
 			   <i class="mdui-list-item-icon mdui-icon material-icons">open_in_new</i>
   	        </li>
 			<li class="mdui-list-item mdui-ripple">
-    	       <div class="mdui-list-item-content" onclick="window.open('http://edw.rcraft.ml/xksc');">访问 晓空iApp手册Web版 官方站点</div>
+    	       <div class="mdui-list-item-content" onclick="window.open('http://xksc.moeworld.tech');">访问 晓空iApp手册Web版 官方站点</div>
 			   <i class="mdui-list-item-icon mdui-icon material-icons">open_in_new</i>
   	        </li>
 			
