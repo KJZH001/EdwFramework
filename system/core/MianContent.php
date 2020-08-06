@@ -15,6 +15,11 @@ if(@$path_info =$_SERVER["PATH_INFO"]){
 	echo "页面调试输出：<br>";
 	echo "链接参数：".$path_info."<br>";
 	}
+	else
+	{
+		//载入全局报错处理
+		require("./system/core/error.php");
+	}
 	
 	//调用字符截取 过滤字符
 	$path_info=substr($path_info,1);

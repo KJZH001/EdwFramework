@@ -29,8 +29,10 @@
   <div class="mdui-container-fluid">
   <!-- 基础网格 -->
     <div class="mdui-row">
+
+    
 	<!-- 应用栏 -->
-	<header class="mdui-appbar mdui-appbar-fixed">
+	<header class="mdui-appbar mdui-appbar-fixed" style="display:none">
 	<!-- 工具栏 -->
     <div class="mdui-toolbar mdui-color-theme-accent">
 	
@@ -40,13 +42,13 @@
     <a href="javascript:;" class="mdui-typo-headline 去超链接下划线 mdui-text-color-white">
 	EmptyDream World-空梦世界
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-	<a href="javascript:;" class="mdui-typo-title 去超链接下划线 mdui-text-color-white">404</a>
+	<a href="javascript:;" class="mdui-typo-title 去超链接下划线 mdui-text-color-white">Error</a>
 	</div>
 	
     <!-- 标题自适应 小屏幕 -->
 	<div class="mdui-hidden-sm-up">
 	<!-- 标题 -->
-    <a href="javascript:;" class="mdui-typo-title 去超链接下划线 mdui-text-color-white">空梦框架-404</a>
+    <a href="javascript:;" class="mdui-typo-title 去超链接下划线 mdui-text-color-white">空梦框架-Error</a>
 	</div>
 	
 	<!-- 将元素向两边推去 -->
@@ -69,24 +71,45 @@
 	
     <!-- 主界面内容开始 -->
   	<!-- 基础网格 -->
-	<div class="mdui-container">
+	<div class="mdui-container"style="
+        width:100vw;
+		height:72vh;
+        display: flex;
+        align-items: center; /*定义body的元素垂直居中*/
+        justify-content: center; /*定义body的里的元素水平居中*/
+        ">
 	
 		   <!-- 基础网格 -->
 		   <div class="mdui-container">
-				<center>
-				<div class="mdui-typo mdui-center">
-					<div class="mdui-typo-display-4">404</div>
-					 <center>
-					 <p><strong>哎？这只⑨怎么不见了</strong></p>
-					 <p><strong>你似乎来到了个不存在的地方呢，是不是天然呆打错啦~</strong></p>
-					 </center>
-				</div>
-				</center>
+            <div class="mdui-card" style="
+            padding:20px;
+            padding-top:0px;
+            ">
+                <div class="mdui-typo">
+                    <h1 style="font-size:40px;
+                    line-height:8px;">
+                        空梦框架&nbsp;<small>错误 Error</small></h1>
+                        错误信息：
+                        <br>
+                        <?php
+                        printf("<font color='#1E88E5'><b>%s</b></font>:%s 位于 <b>%s</b> 在第 <b>%d</b>
+                         行<br>\n",$error_type, $error_message, $file, $line);
+                        ?>
+                        <br>这是一个服务器运行时产生的意外的致命错误
+                        <br>如果您是<strong>访问者</strong>，您可以将这份错误提交给管理员，或者稍后再来尝试访问
+                        <br>如果您是<strong>管理员</strong>，您可以参考本页面中的错误信息尝试进行错误修复
+                        <br>
+                        <br>
+                        <div class="mdui-typo-body-1-opacity">Based on EmptyDream World<br>By 晓空</div>
+
+                </div>
+            </div>
+            
 		   </div>
 		   
 		</div>
 	   <!-- 主界面内容基础网格结束 -->
-	<div class="footer" style="
+       <div class="footer" style="
 			position: fixed;
 			left: 0;
 			right: 0;
@@ -94,6 +117,7 @@
 			transition-property: left, right;
 			transition-timing-function: @animation-curve-linear-out-slow-in;
 			transition-duration: 0.3s;
+            display:none
 			">
 					<div class="mdui-color-theme-accent mdui-container-fluid" style="width:100vw;">
 						<div class="mdui-typo" style=padding:16px;">

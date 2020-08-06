@@ -1,0 +1,5 @@
+#取消对个人配置文件的跟踪
+##全局配置
+/global/global.php
+##全局嵌入的自定义js
+/global/customer.js
