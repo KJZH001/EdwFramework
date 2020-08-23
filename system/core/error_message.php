@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>EmptyDream World-空梦世界 开发框架</title>
+  <title>错误 Error_EmptyDream World-空梦世界 开发框架</title>
   <link rel="stylesheet" href="../system/theme/MDUI_official_XiaoKong/css/mdui.min.css">
   <style  type="text/css">
    .去超链接下划线
@@ -18,7 +18,8 @@
   </style>
 </head>
 <!-- 声明主体 -->
-<body id="body" class="mdui-appbar-with-toolbar mdui-theme-primary-blue mdui-theme-accent-blue mdui-loaded" style="">
+<body id="body" class="mdui-appbar-with-toolbar mdui-theme-primary-blue mdui-theme-accent-blue 
+mdui-loaded" style="">
 <!--  -->
 <!-- 声明颜色 -->
 <!-- 声明主色 -->
@@ -92,12 +93,29 @@
                         错误信息：
                         <br>
                         <?php
-                        printf("<font color='#1E88E5'><b>%s</b></font>:%s 位于 <b>%s</b> 在第 <b>%d</b>
-                         行<br>\n",$error_type, $error_message, $file, $line);
+                        //载入默认配置
+                        require("./global/global-example.php");
+                        //载入全局配置
+                        require("./global/global.php");
+
+                        if($gb_debugMessageAll=="true")
+                        {
+                            printf("<font color='#1E88E5'><b>%s</b></font>:%s 位于 <b>%s</b> 在第 <b>%d</b>
+                            行<br>\n",$error_type, $error_message, $file, $line);
+                        }
+                        else
+                        {
+                            printf("<font color='#1E88E5'><b>%s</b></font>:%s 
+                            <br>\n",$error_type, $error_message);
+                            echo "友好的详细报错模式当前已经关闭<br>";
+                        }
+                        
                         ?>
-                        <br>这是一个服务器运行时产生的意外的致命错误
-                        <br>如果您是<strong>访问者</strong>，您可以将这份错误提交给管理员，或者稍后再来尝试访问
-                        <br>如果您是<strong>管理员</strong>，您可以参考本页面中的错误信息尝试进行错误修复
+                        <br>这是一个服务器运行时产生意外的致命错误
+                        <br>如果您是<strong>网站管理员</strong>，您可以参考本页面中的错误信息并打开调试模式后
+                        尝试进行错误修复
+                        <br>如果您是<strong>访问者</strong>，请检查您请求的网址是否正确！
+                        您若相信这是一个Bug，您可以将这份错误提交给管理员，或者稍后再来尝试访问
                         <br>
                         <br>
                         <div class="mdui-typo-body-1-opacity">Based on EmptyDream World<br>By 晓空</div>

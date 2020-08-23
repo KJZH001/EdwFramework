@@ -5,7 +5,7 @@
   if (!$gb_conn) {
 	if($gb_debug=="true")
     {
-    printf("Can't connect to MySQL Server. Errorcode: %s ", mysqli_connect_error());
+    printf("发生了一个意外错误，我们无法连接到Mysql数据库！\n错误代码: %s ", mysqli_connect_error());
     }
 	exit;
   }

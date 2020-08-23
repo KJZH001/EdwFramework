@@ -1,8 +1,29 @@
-【Rcraft官方站】
+【晓空blog】
+http://blog.moeworld.tech/
+
+
+【关于】
+内容声明
+
+此处的示列代码大多数来自于互联网，来自于互联网的示列代码与手册作者无关，如果您认为我们侵犯了您的权益，请联系我们进行删除
+如果您需要转载本手册的内容，请加入官方Q群联系我们，或者在保留原作者以及注明来源的情况下遵循GPL v3开源协议
+
+内容以及转载来源
+百度贴吧、小A教程、iApn等
+感谢@残页和、@lincannm以及@EB级内存卡提供的大量优质内容
+完整的关于页内容详情请见http://blog.rcraft.ml/index.php/about/
+谢谢大家的支持！
+
+官方网站
+
+<Rcraft官方站>
 http://bbs.rcraft.ml/
+<晓空blog>
+http://blog.rcraft.ml/
 
 
-【历史网址】
+历史网址
+
 PS.以下网址均为废弃的旧网站，无法打开
 <Rcraft论坛 - 为Rcraft用户和iApp开发者提供的免费交流场所>
 http://rcraft.88448.com/wap/
@@ -13,10 +34,29 @@ http://rcraft.xszz.gq
 http://iapr0.waphx.com/wapindex.aspx?siteid=71807&classid=0
 
 
+【关于重力感应事件的说明】
 
-【说明】
-此处的示列代码大多数来自于互联网，来自于互联网的示列代码与作者无关。
-如果有重复的，请联系作者。
+//@EB级内存卡
+首先，把手机平铺在水平面上，作平面直角坐标系(x,y轴),再垂直于该平面作z轴
+
+当z轴垂直于水平面时
+        屏幕在上 st_z=10
+        屏幕在下 st_z=-10
+当x轴垂直于水平面时
+        手机右侧在上 st_x=-10
+        手机左侧在上 st_x=10
+当y轴垂直于水平面时
+        手机上侧在上 st_y=10
+        手机下侧在上 st_y=-10
+        
+注意，因为xyz轴很少能完全垂直水平面，建议判断赋值是否在某一取值范围内
+
+
+重力感应事件可以判断手机的放置状态
+在这个事件里写代码，相当于在 无限循环 里写代码
+
+
+
 
 
 【简易闹钟】
@@ -6682,5 +6722,766 @@ us(1,"background",ok)
 当您看到这句话时，这便意味着您的手册程序已经部署完成。
 同时也意味着 空梦框架 已经成功的在您的设备上正常运行。
 感谢您的使用！
+
+
+【字符串倒着输出】
+//作者 贴吧@我是大侠233
+s str = "这是字符串"
+javanew(a, "java.lang.StringBuffer", "String", str)
+java(a, a, "java.lang.StringBuffer.reverse")
+java(c, a, "java.lang.StringBuffer.toString")
+syso(c)
+
+
+【随机语录的启动语录】
+
+
+
+sl("你爹|你大爷|你二爷|你大舅|你二舅|你大侄子","|",ok)
+//分割为数组
+
+sran(1,6,sj)
+//生产1-6的随机数
+
+sgsz(ok,sj,yes)
+//随机访问语录
+
+tw(yes)
+
+
+【防止打开软件输入法】
+在编辑框的父控件属性里添加：
+focusable=true
+focusableintouchmode=true
+即可
+
+
+【一建清除文件夹所有文件】
+fn del(path)
+t()
+{
+  f(ss.path0==null)
+  {
+    fi(path,f)
+    f(f==false)
+    {
+      ufnsui()
+      {
+        tw("文件夹路径错误！")
+      }
+      ss path0=null
+      endcode
+      //判断是否为文件夹，否就停止运行
+    }
+    ss path0=path
+    //把实时要删的文件夹存到变量path0中
+  }
+  
+  f(path?ss.path0)
+  {
+    //判断原要删的文件夹路径中是否包含有实时要删的文件夹路径，如果包含则执行下面的代码，否就表示原要删的文件夹已删除
+    fd(path,f)
+    //尝试删除该文件夹，返值到f
+    f(f==true)
+    {
+      //如果删除path文件夹成功则
+      ss("删除："+path+"  成功1！",k)
+      syso(k)
+      //打印删除的文件（夹）路径详情
+      slg(path,l)
+      slof(path,"/",l,l1)
+      //取路径path的倒数第一个字符"/"的位置
+      ssg(path,0,l1,path1)
+      //截取路径path的父目录
+      fn a.del(path1)
+      //开始新一轮的删除，以path1为叁数
+      endcode
+    }
+    //如果删除文件夹path失败，则表示path是一个非空文件夹，执行下面的循环删除里面的文件（夹）
+    fl(path,a)
+    for(b;a)
+    {
+      ss(path+"/"+b,path2)
+      fd(path2,f)
+      f(f==false)
+      {
+        fn a.del(path2)
+        //如果删除文件夹path2失败则重新以path2为叁数重新删除
+        endcode
+      }
+      ss("删除："+path2+"  成功！",k)
+      .syso(k)
+      //打印删除成功的文件（夹）路径
+    }
+    fn a.del(path)
+    endcode
+    //文件夹path里面的所有文件（夹）全删完后重新开始删除，传入叁数path
+  }
+  ss path0=null
+  ufnsui()
+  {
+    tw("删除完毕！")
+  }
+}
+end fn
+
+//以上代码请放到模块a.myu里，如果你要改模块名称，请将上面代码里的3个a.del改一下
+
+//以下代码放到按钮点击事件中,传入要删的文件夹调用上面的模块一键删除
+s lj="/sdcard/abc"
+.模块会自动判断路径的正确性以及是否是文件夹
+fn a.del(lj)
+.调用模块开始删除
+
+
+【远程弹窗公告】
+t()
+{
+  hs("这里是网址",a)
+  sj(a,"获取符","获取符",b)
+  ufnsui()
+  {
+    utw(null,"公告",b,"知道了",true,sb)
+    {
+    }
+  }
+  
+  
+}
+
+
+【文字逐渐缩小】
+t()
+{
+  s id=文本控件ID
+  s t=150
+  .设置文本字体初始大小
+  w(t&gt;15)
+  .启用循环，当字体大小小于5时停止循环
+  {
+    s(t-2,t)
+    ufnsui()
+    {
+      us(id,"textsize",t)
+    }
+    stop(20)
+    .设置停顿间隔
+  }
+}
+
+
+
+【文字逐渐向左无限移动】
+t()
+{
+  s id=控件id
+  swh("pxw",w)
+  s s=w
+  ufnsui()
+  {
+    us(id,"layout_marginleft",s)
+  }
+  w(1==1)
+  {
+    f(s&gt;0)
+    {
+      s(s-5,s)
+      ufnsui()
+      {
+        us(id,"layout_marginleft",s)
+      }
+      stop(10)
+      .循环间隔
+    }
+    else
+    {
+      s s=w
+    }
+  }
+}
+
+
+【在侧滑和滑动窗体显示列表的方法】
+.很多小伙伴用原始方法都不行因为这里是侧滑和滑动窗体的主页
+
+
+【全局循环背景音乐】
+.这是全局的任何页面都可以播放哦
+
+.设置音乐文件路径并播放，将播放组件对象设为全局
+s miusic = "文件路径"
+bfm(miusic, sss.mp3)
+.设置循环播放
+bfms(sss.mp3, "sl", true)
+
+
+【文本取值与赋值】
+s id=这里是文本或编辑框控件id
+
+
+ug(id,"text",a)
+
+.获取内容并赋值变量给a
+._______________
+
+s a="你好"
+us(id,"text",a)
+
+.将变量a赋值给控件
+
+
+【文本保存、读取、查找】
+
+
+保存:
+1、
+fw("abc.txt","这里是内容")
+
+2、
+s a="这里是内容"
+fw("abc.txt",a)
+
+3、
+s a="iapp/abc.txt"
+s b="这里是内容"
+fw(a,b)
+
+.iapp为文件夹，abc.txt为文件
+
+________________
+
+
+读取:
+1、
+fr("abc.txt",a)
+tw(a)
+
+2、
+s a="iapp/abc.txt"
+fr(a,b)
+us(id,"text",b)
+
+.iapp为文件夹，abc.txt为文件，id为控件id须修改
+
+________________
+
+
+查找:
+
+s a="这里是要找的内容，我们来找这里有几个”找”字"
+s b="找"
+
+s c=0
+s d=0
+s e=0
+slg(a,g)
+t()
+{
+w(e==0)
+{
+siof(a,b,c,f)
+f(f==-1)
+{
+s e=1
+ss("查找完成，共"+d+"个",h)
+tw(h)
+}
+else
+{
+s(f+1,f)
+ssg(a,f,g,a)
+slg(a,g)
+s(d+1,d)
+}
+}
+}
+
+________________
+
+.注：.a是要查找内容，b是要找的字，如果要查找的内容是读出文本那就加一个读出涵数，然后把上面s a="xxx"那句删除掉，如：
+
+s a="这里是要找的内容，我们来找这里有几个”找”字"
+
+改成:
+
+fr("abc.txt",a)
+
+
+【注册码与注册机的原理】
+
+
+有时候作者为了保留权利，特加入了注册码做为正版软件，使用方需要向作者购买或索爱激活码才能通过检测，但如何才能让每个人的激活不通用呢？那么就需要获取使用方的imei号，因为每部机器的imei都是不同的，下面就教大家如何去写。
+
+1.有两种办法保存数据，一种为本地，一种为服务器，我们先说说第一种，首先要用一个本地文件做为保存记录，下次打开才不会再次要求输入激活码，我们以根目录abc.txt文件为例。
+
+2.
+________________
+
+simei(imei)
+s2(imei*2,imei1)
+s(imei1*2,imei2)
+.获取机器号并乘以2后赋值给imei2，可任意计算，假设有s2算法最后一步一定要用单s计算
+
+s wj="abc.txt"
+.这个是保存数据的文件路径，越隐蔽越好
+
+fe(wj,a)
+f(a=="true")
+{
+fr(wj,b)
+f(b=="")
+{
+tw("注册文件异常！")
+}
+else
+{
+f(b==imei2)
+{
+tw("已注册，欢迎使用！")
+.这里可以加上转跳代码，跳转前别忘了关闭当前界面
+}
+else
+{
+tw("注册失败！")
+}
+}
+}
+else
+{
+tw("未注册，请注册后使用！")
+}
+
+_________________
+
+3.下面为服务器办法，这种办法不易破解，首先要有一个服务端的权限，可以自由编辑且地址不会被改变，与远程更新原理一样，可以用帖子、我的磨或网页，一定要是仅你本人编辑并且该地址不会变才行。
+
+.我们以我的磨(wodemo.net)为例，先在我的磨注册一个网站，然后编写一个撰文，把仅限使用用户的imei号写上去，多个用符号隔开，如，我有一部机器码为123，另一个为456，那么就写上”123，456”，完成后保存，用uc浏览器复制该网页地址出来，比如复制出来的是qiulai.modemo.net
+
+_________________
+
+simei(imei)
+.获取用户机器号
+
+t()
+{
+s b=imei
+hs("http://1294858802.wodemo.net",null,null,a)
+f(a?b)
+{
+tw("已注册，欢迎使用！")
+.这里可以加上转跳代码，跳转前别忘了关闭当前界面
+}
+else
+{
+tw("未注册，请注册后使用！")
+}
+}
+
+.通过网页的返回判断是否有该机器号，存在就成功注册，不存在就失败。
+
+__________________
+
+
+.注：有些手机的机器号带有字母，使用第一种办法需要判断字母后再计算，否则会出错，第二种办法就不用计算，任何机器号都可以。
+
+
+
+
+【循环计算加法】
+
+
+s id=这里是起始数输入框id
+s id1=这里是结束数输入框id
+s id2=这里是显示结果文本或输入框id
+
+t()
+{
+ug(id,"text",a)
+ug(id1,"text",b)
+s d=a
+s c=0
+w(a<b)
+{
+s+(1,a)
+s+(a,c)
+}
+s+(c,d)
+us(id2,"text",d)
+}
+
+
+注：计算数是递次的
+
+
+
+【限制使用密码进入软件】
+
+
+ug(密码输入编辑框id,"text",a)
+f(a=="初始密码")
+{
+tw("密码正确")
+.这里可以加上其他代码，比如，密码正确后跳转界面uigo(界面名)
+}
+else
+{
+tw("密码错误")
+}
+
+
+
+【搜索列表关键词代码】
+
+
+sl("iapp;youyou;iapp代码助手;i学习;无敌",";",po)
+.分割一段内容为数组
+for(a;po)
+{
+//循环判断是否包含需要搜索的内容
+f(a?"iapp代码助手")
+{
+//打印包含蛋字的内容会打印蛋疼、鸡蛋、蛋糕
+syso(a)
+}
+}
+
+
+那怎么显示到列表呢？只需要把syso换成ula即可！
+
+
+
+
+【图片无限旋转】
+.放页面载入事件
+dhr(dh, 0, 720, 1, 0.5, 1, 0.5)
+dh(dh, "duration", 3000)
+us(图片id, "dh", dh)
+dhon(dh)
+{
+us(图片id, "dh", dh)
+}
+
+
+
+【光标位置插入内容】
+ss tj="iapp代码助手"
+s id="编框id"
+slg(ss.tj,zfcd)
+ug(id,"selectionstart",gbwz)
+ug(id,"text",bjnr)
+s(gbwz zfcd,gbwz2)
+ssg(bjnr,0,gbwz,hq2)
+ssg(bjnr,gbwz,hq3)
+ss(hq2 ss.tj hq3,hq4)
+us(id,"text",hq4)
+us(id,"selection",gbwz2)
+
+.作者：youyou 
+
+
+
+【编辑框显示行号】
+.放进编辑框监听事件文本更新后
+
+
+t()
+{
+s bjk=编辑框id
+s wb=用来显示行数的文本id
+.先布局在弄
+s hs=0
+f(st_sS?"\n")
+{
+ug(bjk,"text",nr)
+sr(nr,"\n","\nh%h",nr1)
+//这里需要注意，2.08版本后添加了正则表达式，所以用的功能需要正则表达式才能正常，不过这里可以稍微改进下就可以了，不解释了，自己参悟
+sl(nr1,"\n",nr2)
+for(nr3;nr2)
+{
+s+(hs,1,hs)
+ss(hs1+"\n"+hs,hs1)
+}
+sr(hs1,"\n1\n","1\n",hs2)
+//这里是为了解决第一行显示的错误
+ufnsui()
+{
+us(wb,"text",hs2)
+}
+}
+}
+sss hszkg=1
+
+
+【编辑框高亮】
+.放进编辑框监听事件文本更新后
+
+s id=编辑框id
+ug(id,"text",nr)
+ug(id,"selectionstart",wz)
+.获取部分
+s ss="这里面填你要高亮的内容♡→这货是分隔符，可以换掉。♡可以批量替换"
+sl(ss,"♡",ss)
+sgszl(ss,sb)
+.设置数组
+s xh=0
+for(0;sb)
+{
+sgsz(ss,xh,ss2)
+ss("<font color=#FFA500>"+ss2+"</font>",th)
+.用于高亮的html
+sr(nr,ss2,th,nr)
+s(xh+1,xh)
+}
+.循环拼接为html
+sr(nr,"\n","<br>",nr)
+ss("(html)"+nr,nr)
+us(id,"text",nr)
+us(id,"selection",wz)
+.这个用来保存光标位置
+.作者:不详
+
+
+【仿iapp代码补全】
+
+
+.需要自己布局，自己动脑
+.下面是仿iapp代码补全辅助工具
+ss gbwz0=0
+.ug(xbx.19,"text",txjq2)
+//xbx.19为编辑框的id
+s txjq2=st_sS
+sss txjq=txjq2
+sr(txjq2,"\n","щ",txjq)
+ug(xbx.19,"selectionstart",gbwz)
+ss gbwz0=gbwz
+ssg(txjq,0,gbwz,jq)
+sss jq=jq
+s zf=","={}><(); -*!|/:?&\#@$p[]_щ "
+s zkh="("
+s ykh=")"
+sss gbwz=gbwz
+t()
+{
+w(ss.gbwz0>0)
+{
+s-(ss.gbwz0,1,ss.gbwz0)
+s-(ss.gbwz0,1,gbwz1)
+ssg(jq,ss.gbwz0,gbwz,jq2)
+ssg(jq,gbwz1,ss.gbwz0,jq3)
+f(jq3==null)
+{
+s jq3=" "
+}
+sss jq2=jq2
+f(zf?jq3&&zf!="")
+{
+sss gbwz0=ss.gbwz0
+ss gbwz0=0
+f(jq2!=zhk&&jq2!=ykh&&jq2!=" ")
+{
+fn ss.tx(jq2)
+}
+else f(jq2!=zhk||jq2!=ykh||jq2!=" ")
+{
+ufnsui()
+{
+us(xbx.87,"visibility","gone")
+//xbx.87为显示在右上角那个列表控件
+}
+}
+}
+}
+}
+
+
+写入ss.myu模块里
+fn tx(ssgj)
+ufnsui()
+{
+us(xbx.87,"visibility","gone")
+}
+ula(ssjg, "clear")
+s sslj="@function/"
+ss(sslj "fix.txt",ssnr1)
+//要搜索的函数表
+fr(ssnr1,nr1)
+s fh="sl(nr1,fh,sc1)
+s ssjg=null
+s ssjl=0
+t()
+{
+f(ssgj=="")
+{
+.tw("输入不能为空")
+}
+else
+{
+for(sd1;sc1)
+{
+sj(sd1,"「","」",hsj)
+sj(sd1,"《","》",hsdm)
+sj(sd1,"〖","〗",hsys)
+f(hsdm?*ssgj)
+{
+s (ssjl,1,ssjl)
+ula(ssjg,2=hsdm,3=hsys,-1=hsj)
+}
+}
+f(ssjl>=5)
+{
+s w="200dp"
+}
+else
+{
+s h=-2
+}
+us(xbx.87,"height",h)
+f(ssjl!=0)
+{
+ufnsui()
+{
+us(xbx.87,"visibility","visible")
+uls(xbx.87,ssjg,"zdtxlb.iyu",-1,-2)
+}
+}
+else
+{
+ufnsui()
+{
+us(xbx.87,"visibility","gone")
+.tw("无匹配")
+}
+}
+}
+}
+
+
+显示到右上角列表的单击项目事件
+ulag(st_vW,st_pN,2,cr)
+ulag(st_vW,st_pN,-1,ts)
+s bjk=sss.bjk
+ug(bjk,"selectionstart",dqgb)
+f(sss.gbwz==dqgb)
+{
+sr(sss.jq2,"щ","\n",jq2x)
+sr(sss.jq,"щ","\n",jqx)
+slg(cr,jcd)
+s (sss.gbwz0,jcd,szgb)
+ss(jq2x "@jsmjq",jq2)
+ss(jqx "@jsmjq",jq)
+sr(sss.txjq,jqx,jq,zbcr)
+sr(zbcr,jq2,cr,wccr)
+us(bjk,"text",wccr)
+us(bjk,"selection",szgb)
+}
+else
+{
+fn charu.cr(cr)
+//这里是插入文本模块，前面貌似讲过
+}
+tw(ts)
+us(st_vW,"visibility","gone")
+
+
+【给列表载入各种动画效果】
+//获取控件对象id1
+gvs(st_vW,list.1,gvs_1)
+//获取控件对象1
+
+
+//.右往左滑动特效
+swh("pxw",w)
+dht(dh, w,0,150, 0)
+dh(dh, "duration",450)
+us(gvs_1, "dh", dh)
+
+
+
+
+
+
+/.左往右动画
+swh("pxw",w)
+dht(dh,0,w,10, 0)
+dh(dh, "duration",450)
+us(gvs_1, "dh", dh)
+./左往右动画
+
+/.列表翻转动画
+dhas(dh,gvs_1, "rotationY", 0,30,60,90,120,150,180,210,240,270,300,330,360)
+dh(dh, "duration", 1500)
+dh(dh, "start")
+.//列表翻转动画
+
+
+/.列表渐显动画
+
+dha(dh,true, false)
+dh(dh, "duration", 1000)
+us(gvs_1, "dh", dh)
+
+.//列表渐显动画
+
+
+/.由小到大显示
+dhs(dh, 0.4, 2.0, 0.4, 2.0, 1, 0.4, 1, 0.4)
+dh(dh, "duration", 1500)
+us(gvs_1, "dh", dh)
+./由小到大显示
+参考iApc的 列表颜色图标
+
+作用：可以设置每个列表的圆角或者背景颜色，又或者设置边框，其他一切等等
+
+比如两个界面：mian.iyu主界面和list.iyu列表界面
+首先在列表设计界面list.iyu的载入事件写代码
+
+gvs(st_vW,list.1,ok)
+us(ok,"background","#336699")
+
+通过gvs获取id为1的对象并设置背景颜色为#336699
+
+如何圆角或者边框呢？可以搜索ngde属性。
+设置圆角例子：
+gvs(st_vW,list.1,ok)
+ngde(5,"#336699",yes)
+us(ok,"background",yes)
+获取内容(界面名.控件id,控件属性,取值)
+
+
+【设置列表背景为圆角】
+参考iApc的 列表颜色图标
+
+作用：可以设置每个列表的圆角或者背景颜色，又或者设置边框，其他一切等等
+
+比如两个界面：mian.iyu主界面和list.iyu列表界面
+首先在列表设计界面list.iyu的载入事件写代码
+
+gvs(st_vW,list.1,ok)
+us(ok,"background","#336699")
+
+通过gvs获取id为1的对象并设置背景颜色为#336699
+
+如何圆角或者边框呢？可以搜索ngde属性。
+设置圆角例子：
+gvs(st_vW,list.1,ok)
+ngde(5,"#336699",yes)
+us(ok,"background",yes)
+
+
+【美化控钮或背景】
+s a1 = 5
+s b1 = 15
+s c1 = "#ff059700|#ff059700|#ff059700"
+s d1 = "#ff059700"
+s e1 = "topbottom"
+ngde(a1,b1,c1,d1,e1,f)
+us(24,"background",f)
+
+
+ーーーーーーーー
+
+ngde("5","5","#ff00bdff","#ff00bdff", a)
+
+us(6,"background",a)
 
 

@@ -3,6 +3,11 @@
 //定义Error_Handler函数，作为set_error_handler()函数的第一个参数“回调”
 function error_handler($error_level,$error_message,$file,$line)
 {
+	//载入默认配置
+	require("./global/global-example.php");
+	//载入全局配置
+	require("./global/global.php");
+	
     $EXIT =FALSE;
     switch($error_level){
     //提醒级别
@@ -36,16 +41,21 @@ function error_handler($error_level,$error_message,$file,$line)
         
     //如果错误影响到程序的正常执行，跳转到友好的错误提示页面
     
-    if (TURE==$EXIT){
+    if ($EXIT==TURE){
+    //友好报错转向
+    //echo '<script>location = "err.html";</scrpit>';
     //载入输出报错界面
     require("./system/core/error_message.php");    
     exit;
-    //echo '<script>location = "err.html";</scrpit>';
+    
     }
     else
     {
+		if($gb_debug=="true")
+		{
         printf("<font color='#1E88E5'><b>%s</b></font>:%s 位于 <b>%s</b> 在第 <b>%d</b>
                          行<br>\n",$error_type, $error_message, $file, $line);
+		}
     }
 
     
@@ -58,9 +68,9 @@ function error_handler($error_level,$error_message,$file,$line)
 
     //报错测试
     //如无特殊原因，请保持注释状态，否则框架将无法正常运行
-    /*
-    //使用未定义的变量要报notice的
     
+	/*
+    //使用未定义的变量要报notice的
     echo $novar;
         
     //除以0要报警告的

@@ -56,15 +56,38 @@
 		   <!-- 基础网格 -->
 		   <div class="mdui-container">
 				<div class="mdui-typo">
-					<h1>欢迎&nbsp;&nbsp;<small>欢迎使用 空梦世界 开发框架</small></h1>
-					<p>在接下来，您需要进行快速的安装步骤
-					<br>这可能需要一些时间，不过很快就好</p>
-					<!-- <p></p> -->
-					<a class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent"
-					href="./install_1">现在开始</a>
+					<h1>连接数据库&nbsp;&nbsp;<small>这一步用来检测数据库的连接情况</small></h1>
+                    <?php
+                    //引入数据库
+                    $gb_conn=mysqli_connect($gb_servername, $gb_username, $gb_password,$gb_sqlname);
+                    if (!$gb_conn) 
+                    {
+                        printf("发生了一个意外错误，我们似乎无法与数据库建立连接！\n错误代码: %s ", 
+                            mysqli_connect_error());
+                            echo "<p>请返回上一步检测您的数据库配置信息是否填写正确！</p>";
+                    }
+                    else
+                    {
+                        echo "<p>很好！现在数据库似乎已经可以正常的与框架进行连接了</p>
+                            <p>接下来我们可以去生成数据库了！</q>";
+                    }
+                    ?>
 					
 				</div>
-		   
+            <br>
+            <br>
+            <a class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent"
+                href="./install_2">←&nbsp;&nbsp;填写配置文件</a>
+            &nbsp;&nbsp;
+            <!-- 标题自适应 小屏幕 -->
+            <div class="mdui-hidden-sm-up">
+            <br>
+            </div>
+            <a class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent"
+                href="./install_4">生成数据库&nbsp;&nbsp;→</a>
+            <br>
+            <br>
+
 		   </div>
 		   
 		</div>
