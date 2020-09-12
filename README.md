@@ -4,11 +4,11 @@
   
    【小徽章】 Language PHP License MIT&GPL v3 Chat Gitter
    
-<img src="https://icdn.7t5j.cn/2020/09/12/3b7a4d0cc69de.png" alt="made-with-pug.png" title="made-with-pug.png" height="30%" />
-<img src="https://icdn.7t5j.cn/2020/09/12/d9b21d7ab971a.png" alt="powered-by-black-magic.png" title="powered-by-black-magic.png" />
-<img src="https://icdn.7t5j.cn/2020/09/12/93c4f701f8558.png" alt="0-percent-optimized.png" title="0-percent-optimized.png" />
-<img src="https://icdn.7t5j.cn/2020/09/12/a6f794a42dcb7.png" alt="cc-nc-sa.png" title="cc-nc-sa.png" />
-<img src="https://icdn.7t5j.cn/2020/09/12/652c75d23133c.png" alt="chat.png" title="chat.png" />
+<img src="https://icdn.7t5j.cn/2020/09/12/3b7a4d0cc69de.png" alt="made-with-pug.png" title="made-with-pug.png" width="20%" />
+&ensp;
+<img src="https://icdn.7t5j.cn/2020/09/12/a6f794a42dcb7.png" alt="cc-nc-sa.png" title="cc-nc-sa.png" width="36%" />
+&ensp;
+<img src="https://icdn.7t5j.cn/2020/09/12/652c75d23133c.png" alt="chat.png" title="chat.png" width="20%" />
 
    
 ---
@@ -91,5 +91,7 @@
 
 ### 一切项目仅用于开发学习，切勿用于违法用途
 
-    ![powered-by-black-magic.png](https://icdn.7t5j.cn/2020/09/12/d9b21d7ab971a.png)
+<img src="https://icdn.7t5j.cn/2020/09/12/d9b21d7ab971a.png" alt="powered-by-black-magic.png" title="powered-by-black-magic.png" width="36%" />
+<br>
+<img src="https://icdn.7t5j.cn/2020/09/12/93c4f701f8558.png" alt="0-percent-optimized.png" title="0-percent-optimized.png" width="20%" />
     
