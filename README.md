@@ -14,3 +14,12 @@
 <p>♢</p>
 
 </div>
+
+## Edwforever 空梦永恒
+<div align="center">
+<p>当幻想与现实交织，不再存在界限之时，所有的一切编不再区分于虚实</p>
+<p>于此，存在的一切也便成为了现实</p>
+</div>
+<div align="right">
+  <p></p>
+</div>
