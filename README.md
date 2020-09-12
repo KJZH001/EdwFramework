@@ -56,7 +56,7 @@
   - EdwApiCore For Minecraft
 
 - 基于Minecraft民间二次开发服务器内核Paper、Akarin和BungeeCord的Minecraft Server
-  - 空梦世界 ~EmptyDream World~ 群组服务器
+  - 空梦世界 EmptyDream World 群组服务器
   
 - 基于iApp iyu V3开发的程序
   - 晓空iApp手册（安卓版）
