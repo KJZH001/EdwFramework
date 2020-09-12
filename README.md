@@ -1,8 +1,6 @@
 <div align="center">
   
    【空梦logo】 【EmptyDream_World title】
-  
-   【小徽章】 Language PHP License MIT&GPL v3 Chat Gitter
    
 <img src="https://icdn.7t5j.cn/2020/09/12/3b7a4d0cc69de.png" alt="made-with-pug.png" title="made-with-pug.png" width="20%" />
 &ensp;
