@@ -3,10 +3,20 @@
    【空梦logo】 【EmptyDream_World title】
   
    【小徽章】 Language PHP License MIT&GPL v3 Chat Gitter
-    ![made-with-pug.png](https://icdn.7t5j.cn/2020/09/12/3b7a4d0cc69de.png)
-    ![cc-nc-sa.png](https://icdn.7t5j.cn/2020/09/12/a6f794a42dcb7.png)
-    ![chat.png](https://icdn.7t5j.cn/2020/09/12/652c75d23133c.png)
-    ![0-percent-optimized.png](https://icdn.7t5j.cn/2020/09/12/93c4f701f8558.png)
+   
+<style>
+.xiaoHuiZhang
+{
+max-height:100px;
+}
+ </style>
+   <div class="xiaoHuiZhang"> 
+    <img src="https://icdn.7t5j.cn/2020/09/12/3b7a4d0cc69de.png" alt="made-with-pug.png" title="made-with-pug.png" />
+    <img src="https://icdn.7t5j.cn/2020/09/12/d9b21d7ab971a.png" alt="powered-by-black-magic.png" title="powered-by-black-magic.png" />
+    <img src="https://icdn.7t5j.cn/2020/09/12/93c4f701f8558.png" alt="0-percent-optimized.png" title="0-percent-optimized.png" />
+    <img src="https://icdn.7t5j.cn/2020/09/12/a6f794a42dcb7.png" alt="cc-nc-sa.png" title="cc-nc-sa.png" />
+    <img src="https://icdn.7t5j.cn/2020/09/12/652c75d23133c.png" alt="chat.png" title="chat.png" />
+  </div>
    
 ---
 
