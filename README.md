@@ -3,6 +3,10 @@
    【空梦logo】 【EmptyDream_World title】
   
    【小徽章】 Language PHP License MIT&GPL v3 Chat Gitter
+    ![made-with-pug.png](https://icdn.7t5j.cn/2020/09/12/3b7a4d0cc69de.png)
+    ![cc-nc-sa.png](https://icdn.7t5j.cn/2020/09/12/a6f794a42dcb7.png)
+    ![chat.png](https://icdn.7t5j.cn/2020/09/12/652c75d23133c.png)
+    ![0-percent-optimized.png](https://icdn.7t5j.cn/2020/09/12/93c4f701f8558.png)
    
 ---
 
@@ -16,8 +20,8 @@
 </div>
 
 ## Edwforever 空梦永恒
-
-
+ 
+ 
 <div align="center">
 <p>当幻想与现实交织，不再存在界限之时，所有的一切编不再区分于虚实</p>
 <p>于此，存在的一切也便成为了现实</p>
@@ -83,3 +87,6 @@
 如果您愿意将您的项目开源并提交于合集仓库中，那么您的名字也可以被添加于此
 
 ### 一切项目仅用于开发学习，切勿用于违法用途
+
+    ![powered-by-black-magic.png](https://icdn.7t5j.cn/2020/09/12/d9b21d7ab971a.png)
+    
