@@ -89,6 +89,5 @@
 ### 一切项目仅用于开发学习，切勿用于违法用途
 
 <img src="https://icdn.7t5j.cn/2020/09/12/d9b21d7ab971a.png" alt="powered-by-black-magic.png" title="powered-by-black-magic.png" width="36%" />
-<br>
-<img src="https://icdn.7t5j.cn/2020/09/12/93c4f701f8558.png" alt="0-percent-optimized.png" title="0-percent-optimized.png" width="20%" />
+<br><img src="https://icdn.7t5j.cn/2020/09/12/93c4f701f8558.png" alt="0-percent-optimized.png" title="0-percent-optimized.png" width="20%" />
     
