@@ -88,6 +88,17 @@
 
 ### 一切项目仅用于开发学习，切勿用于违法用途
 
-<img src="https://icdn.7t5j.cn/2020/09/12/d9b21d7ab971a.png" alt="powered-by-black-magic.png" title="powered-by-black-magic.png" width="36%" />
+所有的一切项目和相关的源代码仅用于开发和学习使用，在使用和进行开发时请遵守中华人民共和国大陆以及您所在地和服务器所在地的相关法律规定
+
+否则，空梦框架以及永恒计划和其他相关的项目参与者均不承担任何（以及相关的连带）责任
+
+## EdwFramework 空梦框架 / 项目简介
+
+空梦框架是一个高度自由的开源轻量级PHP开发框架，定位类似于ThinkPHP、Larval等PHP框架，但也有一些不同之处，我们将辅助开发和面板的管理功能做到了一起
+这个项目最初源自于我所编写的RAPI这个系列的项目
+
 <img src="https://icdn.7t5j.cn/2020/09/12/93c4f701f8558.png" alt="0-percent-optimized.png" title="0-percent-optimized.png" width="20%" />
-    
+<br><img src="https://icdn.7t5j.cn/2020/09/12/d9b21d7ab971a.png" alt="powered-by-black-magic.png" title="powered-by-black-magic.png" width="36%" />
+
+
+
