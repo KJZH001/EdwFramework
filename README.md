@@ -4,6 +4,7 @@
   &ensp;
   <img src="https://icdn.7t5j.cn/2020/10/04/e399c383648ab.png" alt="空梦logo" title="cc-nc-sa.png" width="36%" />
   <br>
+  <br>
    
 <img src="https://icdn.7t5j.cn/2020/09/12/3b7a4d0cc69de.png" alt="made-with-pug.png" title="made-with-pug.png" width="20%" />
 &ensp;
@@ -192,10 +193,22 @@
 
 感谢所有人对开源社区做出的贡献！
 
+## 关于形象
+
+形象 **樱夜天惠** 生成自 Waifu Labs
+
+二次改图 By 晓空
+
+仅供观赏以及学习交流使用，未经授权切勿随意使用
+
+请勿用于任何商业用途
+
 ## 鸣谢
 Visual Studio Code、Eclipse、Android Studio、IDEA等IDE工具
 
 Github、Gitee、OsChina、CSDN、Gitter、Gogs、Gitlab等开源社区
+
+Waifu Labs图像生成器
 
 最后鸣谢所有参与到永恒计划中的贡献者和使用者
 
