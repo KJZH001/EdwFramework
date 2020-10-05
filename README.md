@@ -1,6 +1,8 @@
 <div align="center">
   
-   【空梦logo】 【EmptyDream_World title】
+  <img src="https://icdn.7t5j.cn/2020/09/12/3b7a4d0cc69de.png" alt="樱夜天惠" title="made-with-pug.png" width="20%" />
+  &ensp;
+  <img src="https://icdn.7t5j.cn/2020/10/04/e399c383648ab.png" alt="空梦logo" title="cc-nc-sa.png" width="36%" />
    
 <img src="https://icdn.7t5j.cn/2020/09/12/3b7a4d0cc69de.png" alt="made-with-pug.png" title="made-with-pug.png" width="20%" />
 &ensp;
