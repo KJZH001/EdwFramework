@@ -53,7 +53,7 @@
 
 - 空梦框架 EdwFramework
   - 短网址API ShortURL
-  - 空梦世界（原晓空iApp手册Web版） xksc
+  - 空梦手册（原晓空iApp手册Web版） xksc
   - 网络图片转HTML API ImgToHtml
   - 开放式登录接口 Openid
   - 欢迎主页[计划中] index
@@ -61,10 +61,10 @@
   - 校园辅助信息管理系统[计划中] SchoolServerAdmin
   
 - 基于Mirai框架协同开发的机器人插件
-  - EdwApiCore For Minecraft
+  - [EdwApiCore For Minecraft](https://github.com/KJZH001/Edw-Api-Core/)
 
 - 基于Minecraft民间二次开发服务器内核Paper、Akarin和BungeeCord的Minecraft Server
-  - 空梦世界 EmptyDream World 群组服务器
+  - [空梦世界 EmptyDream World 群组服务器](http://server.rcraft.ml:30004/EmptyDream-World_Official/Rcraft_MCserver-Public)
   
 - 基于iApp iyu V3开发的程序
   - 晓空iApp手册（安卓版）
