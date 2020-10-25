@@ -52,13 +52,13 @@
 之后，您的项目也会被添加于此，但是也请不要忘了项目描述
 
 - 空梦框架 EdwFramework
-  - 短网址API ShortURL
-  - 空梦手册（原晓空iApp手册Web版） xksc
-  - 网络图片转HTML API ImgToHtml
-  - 开放式登录接口 Openid
+  - [短网址API ShortURL](https://github.com/KJZH001/EdwFramework/tree/master/website/dwz)
+  - [空梦手册（原晓空iApp手册Web版） xksc](https://github.com/KJZH001/EdwFramework/tree/master/website/xksc)
+  - [网络图片转HTML API ImgToHtml](https://github.com/KJZH001/EdwFramework/tree/master/website/imgsToHtml)
+  - [开放式登录接口 Openid](https://github.com/KJZH001/EdwFramework/tree/master/website/Openid)
   - 欢迎主页[计划中] index
-  - 抽老婆 ExWaifu
-  - 校园辅助信息管理系统[计划中] SchoolServerAdmin
+  - [抽老婆 ExWaifu](https://github.com/KJZH001/EdwFramework/tree/master/website/ExWaifu)
+  - [校园辅助信息管理系统<计划中> SchoolServerAdmin](https://github.com/KJZH001/EdwFramework/tree/master/website/SchoolIA)
   
 - 基于Mirai框架协同开发的机器人插件
   - [EdwApiCore For Minecraft](https://github.com/KJZH001/Edw-Api-Core/)
