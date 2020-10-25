@@ -78,6 +78,8 @@ mdui-loaded" style="">
         display: flex;
         align-items: center; /*定义body的元素垂直居中*/
         justify-content: center; /*定义body的里的元素水平居中*/
+		position:absoult;
+		z-index:auto;
         ">
 	
 		   <!-- 基础网格 -->

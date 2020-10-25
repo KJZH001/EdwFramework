@@ -30,7 +30,10 @@
     <div class="mdui-typo-title">源码下载</div>
     <!-- <div class="mdui-card-primary-subtitle">Subtitle</div> -->
     </div>
-    
+    <?php
+	//运行时的报错测试
+	//trigger_error('Trigger a fatal error',E_USER_ERROR);
+	?>
     <!-- 卡片的按钮 -->
     <div class="mdui-card-actions">
         <button class="mdui-btn mdui-ripple" id="源码下载">普通源码</button>
