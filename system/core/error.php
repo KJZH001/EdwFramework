@@ -41,7 +41,7 @@ function error_handler($error_level,$error_message,$file,$line)
         
     //如果错误影响到程序的正常执行，跳转到友好的错误提示页面
     
-    if ($EXIT==TURE){
+    if ($EXIT==TRUE){
     //友好报错转向
     //echo '<script>location = "err.html";</scrpit>';
     //载入输出报错界面
