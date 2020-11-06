@@ -122,7 +122,7 @@
 
 ## 如何上手
 
-请阅读文档：快速上手-Quick Start
+请阅读文档：[快速上手-Quick Start](https://github.com/KJZH001/EdwFramework/blob/master/docs/readme.md)
 
 为了能够方便您使用框架和对框架中的一切进行内容进行定制和修改
 
