@@ -6,7 +6,8 @@
 
 //利用server变量 取得PATH_INFO信息
 //取得链接信息
-if(@$path_info =$_SERVER["PATH_INFO"]){
+if(@$path_info =$_SERVER["PATH_INFO"])
+{
 	
 	//调试输出
 	if($gb_debug=="true")
@@ -23,17 +24,30 @@ if(@$path_info =$_SERVER["PATH_INFO"]){
 	
 	//调用字符截取 过滤字符
 	$path_info=substr($path_info,1);
-	require("./system/core/cut_url.php");
-	$fid=cut_str($path_info,"_",0);
-	$sid=cut_str($path_info,"_",1);
-	$tid=cut_str($path_info,"_",2);
+    require("./system/core/cut_url.php");
+    
+    //全新参数命名格式
+    $gb_url1=cut_str($path_info,"_",0);
+    $gb_url2=cut_str($path_info,"_",1);
+    $gb_url3=cut_str($path_info,"_",2);
+    $gb_url4=cut_str($path_info,"_",3);
+    $gb_url5=cut_str($path_info,"_",4);
+
+    //向下兼容保留
+	$fid=$gb_url1;
+	$sid=$gb_url2;
+    $tid=$gb_url3;
+    
+    
 	
 	//调试输出		
 	if($gb_debug=="true")
 	{
-		echo "fid=".$fid."<br>";
-		echo "sid=".$sid."<br>";
-		echo "tid=".$tid."<br>";
+		echo "gb_url1=".$gb_url1."<br>";
+		echo "gb_url2=".$gb_url2."<br>";
+        echo "gb_url3=".$gb_url3."<br>";
+        echo "gb_url4=".$gb_url4."<br>";
+        echo "gb_url5=".$gb_url5."<br>";
 		
 	}
 
