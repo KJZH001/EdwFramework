@@ -8,10 +8,20 @@
 	{
 		require("./website/".$fid."/mian_zhu.php");
 	}
-	//如果是extract，返回转跳extract.php
+	//如果是liuyan，返回转跳liuyan.php
 	else if($class=="liuyan")
 	{
 		require("./website/".$fid."/index/liuyan.php");
+	}
+	//如果是liuyan，返回转跳liuyan.php
+	else if($class=="fankui")
+	{
+		require("./website/".$fid."/index/fankui.php");
+	}
+	//如果是webAdmin，返回转跳webAdmin.php
+	else if($class=="webAdmin")
+	{
+		require("./website/".$fid."/webAdmin/webAdminContant.php");
 	}
 	//如果无赋值，返回index
 	else
