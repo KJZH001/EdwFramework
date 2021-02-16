@@ -8,6 +8,12 @@
 require("./global/module/core/safeLock.php");
 */
 
+if(@$gb_debug!="true")
+{
+//关闭notice报错提示
+error_reporting(E_ALL^E_NOTICE);
+}
+
 if($gb_debug!="false" or "true")
 {
     if($gb_debug=="true")
@@ -15,8 +21,6 @@ if($gb_debug!="false" or "true")
         echo "当前运行已经触发 空梦框架安全锁";
         echo "请检查您的请求是否正常！";
     }
-    //返回 404
-    require("./system/core/404.php");
     //结束运行
     exit();
 }
