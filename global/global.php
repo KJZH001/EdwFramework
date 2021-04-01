@@ -43,7 +43,7 @@ $gb_copyright="Powered by Rcraft TWIE., Inc. 2012-2020 Base on 晓空EmptyDream 
 /*此处声明网站的基本配置*/
 
 //默认的主页路径
-$gb_indexFile="/ExWaifu";
+$gb_indexFile="/SchoolIa";
 
 
 /*
@@ -57,7 +57,7 @@ $gb_indexFile="/ExWaifu";
   //数据库的用账户
   $gb_username = "root";
   //数据库的密码
-  $gb_password = "root";
+  $gb_password = "lFTKOCNCtPwHtuHp";
   //您要使用的数据库前缀
   $gb_sqlprefix="edw_";
   //您要使用的数据表的前缀
@@ -78,7 +78,7 @@ $gb_indexFile="/ExWaifu";
 如果开启可能会在正常使用时提示Notice等报错，推荐仅在出现问题或开发调试时开启
 */
 //调试模式开关
-$gb_debug="false";
+$gb_debug="true";
 /*
 友好报错页面
 仅在调试模式关闭的情况下才会在致命错误的情况下展现

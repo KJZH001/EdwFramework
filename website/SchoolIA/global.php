@@ -43,4 +43,11 @@ $gb_version="1.00";
 //版权及连接
 //$gb_copyright="Powered by Rcraft TWIE., Inc. 2012-2019";
 
+/* 网站的其他配置 */
+
+//自动刷新的默认值
+$gb_autoRefresh="false";
+
+//公告的默认楼层
+$floor="4";
 ?>

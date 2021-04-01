@@ -3,3 +3,7 @@
 /global/global.php
 ##全局嵌入的自定义js
 /global/customer.js
+.htaccess
+.user.ini
+404.html
+index.html

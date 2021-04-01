@@ -19,7 +19,7 @@
 	<!-- 网盘按钮 -->
     <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
         <i class="mdui-list-item-icon mdui-icon material-icons">cloud</i>
-        <a href="http://djzx.rcraft.ml/" class="mdui-list-item mdui-ripple mdui-color-transparent mdui-text-color-black-text mdui-col-xs-12 mdui-typo-subheading">
+        <a href="https://dj.nas.moeworld.tech/" class="mdui-list-item mdui-ripple mdui-color-transparent mdui-text-color-black-text mdui-col-xs-12 mdui-typo-subheading">
 		&nbsp;&nbsp;&nbsp;NAS</a>
     </div>
 	<!-- 分割线 -->
@@ -27,7 +27,7 @@
 	<!-- 关于按钮 -->
     <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
         <i class="mdui-list-item-icon mdui-icon material-icons">message</i>
-        <a href="http://blog.moeworld.tech/about/" class="mdui-list-item mdui-ripple mdui-color-transparent mdui-text-color-black-text 
+        <a href="http://about.moeworld.top" class="mdui-list-item mdui-ripple mdui-color-transparent mdui-text-color-black-text 
 		mdui-col-xs-12 mdui-typo-subheading">
 		&nbsp;&nbsp;&nbsp;关于</a>
     </div>
