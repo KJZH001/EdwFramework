@@ -18,6 +18,11 @@
 	{
 		require("./website/".$fid."/index/fankui.php");
 	}
+	//
+	else if($class=="md-test")
+	{
+		require("./website/".$fid."/index/md-test.php");
+	}
 	//如果是webAdmin，返回转跳webAdmin.php
 	else if($class=="webAdmin")
 	{

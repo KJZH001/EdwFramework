@@ -8,7 +8,7 @@
     <a href="javascript:;"><img class="drawer-logo border-radius mdui-img-fluid" src="./imgs/cehua.png"></a>
     </div> -->
 	
-	<text class="mdui-list-item cehua_top_text mdui-color-theme-accent mdui-typo-subheading">&nbsp;SchoolIA——<br>一个全新的校园信息系统~</text>
+	<text class="mdui-list-item cehua_top_text mdui-color-theme-accent mdui-typo-subheading">&nbsp;MoeSchoolIA</text>
 	
     <!-- 主页按钮 -->
     <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
