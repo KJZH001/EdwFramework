@@ -31,7 +31,7 @@ if ($gb_sqlonly=="false")
 require("./system/core/conn.php");
 //查询数据库
 //$sql="select * from post order by id desc limit 1;";
-$sql="select * from post order by id desc;";
+$sql="select * from post where floor=".$floor." order by id desc;";
 $result=mysqli_query($gb_conn,$sql);
 ?>
 
