@@ -13,7 +13,7 @@
 	{
 		require("./website/".$fid."/index/liuyan.php");
 	}
-	//如果是liuyan，返回转跳liuyan.php
+	//如果是fankui，返回转跳fankui.php
 	else if($class=="fankui")
 	{
 		require("./website/".$fid."/index/fankui.php");
@@ -22,6 +22,10 @@
 	else if($class=="md-test")
 	{
 		require("./website/".$fid."/index/md-test.php");
+	}
+	else if($class=="maker")
+	{
+		require("./website/".$fid."/index/maker.php");
 	}
 	//如果是webAdmin，返回转跳webAdmin.php
 	else if($class=="webAdmin")
