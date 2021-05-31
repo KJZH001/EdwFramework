@@ -16,12 +16,19 @@
         <a href="./SchoolIA" class="mdui-list-item mdui-ripple mdui-color-transparent mdui-text-color-black-text mdui-col-xs-12 mdui-typo-subheading">
 		&nbsp;&nbsp;&nbsp;主页</a>
     </div>
+    <!-- 官网按钮 -->
+    <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons">home</i>
+        <a href="https://dj.gw.moeworld.tech/" class="mdui-list-item mdui-ripple mdui-color-transparent mdui-text-color-black-text mdui-col-xs-12 mdui-typo-subheading">
+		&nbsp;&nbsp;&nbsp;校内官网</a>
+    </div>
 	<!-- 网盘按钮 -->
     <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
         <i class="mdui-list-item-icon mdui-icon material-icons">cloud</i>
         <a href="https://dj.nas.moeworld.tech/" class="mdui-list-item mdui-ripple mdui-color-transparent mdui-text-color-black-text mdui-col-xs-12 mdui-typo-subheading">
 		&nbsp;&nbsp;&nbsp;NAS</a>
     </div>
+    
 	<!-- 分割线 -->
 	<!-- <div class="mdui-divider"></div> -->
 	<!-- 关于按钮 -->

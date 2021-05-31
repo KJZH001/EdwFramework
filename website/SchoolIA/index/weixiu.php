@@ -57,8 +57,8 @@ $result=mysqli_query($gb_conn,$sql);
             </tr>
 		";
 	}
-  //关闭数据库
-  mysqli_close($gb_conn);
+    //关闭数据库
+    mysqli_close($gb_conn);
     ?>
 
     </tbody>

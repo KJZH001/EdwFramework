@@ -23,6 +23,11 @@
 	{
 		require("./website/".$fid."/index/md-test.php");
 	}
+	//维修管理
+	else if($class=="weixiu")
+	{
+		require("./website/".$fid."/index/weixiu.php");
+	}
 	else if($class=="maker")
 	{
 		require("./website/".$fid."/index/maker.php");
