@@ -18,7 +18,7 @@ $gb_sqlname=$gb_sqlprefix."schoolia";
 require("./system/core/conn.php");
 //查询数据库
 $sql="INSERT INTO `weixiu` (`id`, `title`, `contant`, `time`, `status`, `evaluate`) VALUES (NULL, '".$title."', '".$contant."', CURRENT_TIMESTAMP, '0', '0');";
-echo "<br>".$sql;
+//echo "<br>".$sql;
 
 if($return="json")
 {
