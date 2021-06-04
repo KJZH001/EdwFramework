@@ -2,10 +2,26 @@
 以json的形式返回SchoolIA中当前所有的维修记录
 http://dj.edw.moeworld.tech/api.php?type=get&website=Schoolia&contant=list-all&return=json
 
+全局入口
+http://dj.edw.moeworld.tech/api.php?
+
 全局参数<必要>
 type 输入的类型，只有get和post两种参数
 server 请求的系统服务，该参数请求优先级高于website请求，如果请求站点请勿附带该参数
 website 请求的站点，及对应的站点名称
 
+当前站点参数<必要>
+contant 请求的内容
+    list-all 当前所有维修记录
+    add 新增一个维修记录
+    del 删除一个维修记录
+    done 标记一个记录为完成状态且对其打分
 
+return 返回的类型，示具体而定，大多数情况下请使用默认值json
+按需添加的可选参数
+title 输入的标题
+api-contant 描述的内容
+
+添加维修记录
+http://dj.edw.moeworld.tech/api.php?type=get&website=Schoolia&contant=add&return=json&title=标题&api-contant=这条是用接口添加的
 
