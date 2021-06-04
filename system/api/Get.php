@@ -5,13 +5,13 @@ if(file_exists("./system/api/get/".$server.".php"))
 {
 	require("./system/api/get/".$server.".php");
 }
-elseif(file_exists("./website/."$website"./api/Main.php"))
+elseif(@file_exists("./website/".$website."/api/get/Main.php"))
 {
 	if($gb_debug=="true")
 	{
-		echo "尝试调用网站接口"."./website/."$website"./api/Main.php";
+		echo "尝试调用网站接口"."./website/".$website."/api/get/Main.php<br>";
 	}
-	require("./website/."$website"./api/Main.php");
+	require("./website/".$website."/api/get/Main.php");
 }
 else
 {
@@ -22,5 +22,5 @@ else
 	require("./system/core/404.php");
 }
 
-//http://dj.edw.moeworld.tech/api.php/type=get&website=Schoolia&server=list
+
 ?>
