@@ -1,0 +1,11 @@
+示列接口
+以json的形式返回SchoolIA中当前所有的维修记录
+http://dj.edw.moeworld.tech/api.php?type=get&website=Schoolia&contant=list-all&return=json
+
+全局参数<必要>
+type 输入的类型，只有get和post两种参数
+server 请求的系统服务，该参数请求优先级高于website请求，如果请求站点请勿附带该参数
+website 请求的站点，及对应的站点名称
+
+
+
