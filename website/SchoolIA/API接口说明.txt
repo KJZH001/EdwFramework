@@ -23,7 +23,7 @@ return 返回的类型，示具体而定，大多数情况下请使用默认值j
 title 输入的标题
 api-contant 描述的内容
 id 指定的id记录
-evaluate 评分
+evaluate 评分（0-10分，10分最高）
     仅在使用updata接口使用
     parameter 字段名
     num 字段值
